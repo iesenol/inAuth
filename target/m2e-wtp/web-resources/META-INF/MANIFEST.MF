@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: demo
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Ersin
+Implementation-Vendor-Id: ersin
+Build-Jdk: 1.8.0_152
+Implementation-URL: http://projects.spring.io/spring-boot/DemoInauth/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

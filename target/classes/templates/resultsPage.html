@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Demo Application</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<table border="1" cellpadding="5" cellspacing="5">
+	<caption>RESULTS</caption>
+		<thead>
+			<tr>
+				<th colspan="3" align="center"></th>
+				<th colspan="14" align="center" >Is the coordinate within 500mi radius of these cities?<br/>How far away is it from these cities (miles)?</th>
+			</tr>
+			<tr>
+				<th colspan="3" align="center">Coordinates</th>
+				<th align="center" colspan="2">Tokyo, Japan</th>
+				<th align="center" colspan="2">Sydney, Australia</th>
+				<th align="center" colspan="2">Riyadh, Saudi Arabia</th>
+				<th align="center" colspan="2">Zurich, Switzerland</th>
+				<th align="center" colspan="2">Reykjavik, Iceland</th>
+				<th align="center" colspan="2">Mexico City, Mexico</th>
+				<th align="center" colspan="2">Lima, Peru</th>
+			</tr>
+			<tr>
+				<th align="center">Latitude</th>
+				<th align="center">Longitude</th>
+				<th align="center">In USA?</th>
+				<th align="center">Within 500mi ?</th>
+				<th align="center">Distance to here</th>
+				<th align="center">Within 500mi ?</th>
+				<th align="center">Distance to here</th>
+				<th align="center">Within 500mi ?</th>
+				<th align="center">Distance to here</th>
+				<th align="center">Within 500mi ?</th>
+				<th align="center">Distance to here</th>
+				<th align="center">Within 500mi ?</th>
+				<th align="center">Distance to here</th>
+				<th align="center">Within 500mi ?</th>
+				<th align="center">Distance to here</th>
+				<th align="center">Within 500mi ?</th>
+				<th align="center">Distance to here</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="entry: ${entries}">
+				<td th:text="${entry.lat}" align="right"/>
+				<td th:text="${entry.lng}" align="right"/>
+				<td th:text="${entry.inTheStates}" align="center"/>
+
+				<td th:text="${entry.isWithin1}" align="center"/>
+				<td th:text="${entry.distanceTo1}" align="right"/>
+
+				<td th:text="${entry.isWithin2}" align="center"/>
+				<td th:text="${entry.distanceTo2}" align="right"/>
+
+				<td th:text="${entry.isWithin3}" align="center"/>
+				<td th:text="${entry.distanceTo3}" align="right"/>
+
+				<td th:text="${entry.isWithin4}" align="center"/>
+				<td th:text="${entry.distanceTo4}" align="right"/>
+
+				<td th:text="${entry.isWithin5}" align="center"/>
+				<td th:text="${entry.distanceTo5}" align="right"/>
+
+				<td th:text="${entry.isWithin6}" align="center"/>
+				<td th:text="${entry.distanceTo6}" align="right"/>
+
+				<td th:text="${entry.isWithin7}" align="center"/>
+				<td th:text="${entry.distanceTo7}" align="right"/>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td align="left" colspan="17"><small>Created by: <i><b>Ersin Senol</b></i></small></td>
+			</tr>
+		</tfoot>
+	</table>
+	<br/>
+	<footer>
+		<address><a href="mailto:ersin_senol@yahoo.com"><small>ersin_senol@yahoo.com</small></a></address>
+	</footer>
+</body>
+</html>
